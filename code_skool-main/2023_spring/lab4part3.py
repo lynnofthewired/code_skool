@@ -4,31 +4,31 @@
 # and displays whether the numbers are equal, or which is
 # greater, and if each number is even or odd
 
-num1 = int( input( "Please enter an integer:  "))
-num2 = int( input( "Please enter a second integer:  "))
+entry1 = int( input( "Please enter an integer:  "))
+entry2 = int( input( "Please enter a second integer:  "))
 
 # determine which variable represents the greater integer, or if they are equal, and
 # tell the user
-if num1 - num2 > 0:
-    print (f"Your first integer, {num1}, is greater in value than your second, {num2}.")
-elif num1 - num2 < 0:
-    print (f"Your first integer, {num1}, is lesser in value than your second, {num2}.")
+if entry1 - entry2 > 0:
+    print (f"Your first integer, {entry1}, is greater in value than your second, {entry2}.")
+elif entry1 - entry2 < 0:
+    print (f"Your first integer, {entry1}, is lesser in value than your second, {entry2}.")
 else:
-    print (f"Both of your integers, {num1} and {num2}, are equal in value.")
+    print (f"Both of your integers, {entry1} and {entry2}, are equal in value.")
 
 
-# find the remainders, if any, of num1 and num2 after they're divided by 2
-num3 = num1 % 2
-num4 = num2 % 2
+# find the remainders, if any, of both variables after they're divided by 2
+rem1 = entry1 % 2
+rem2 = entry2 % 2
 
 # use that remainder to tell the user if the integers are even or odd, i.e., a remainder
 # of zero proves an even integer
-if num3 == 0:
-    print (f"Your first choice, {num1}, is an even number.")
+if rem1 == 0:
+    print (f"Your first choice, {entry1}, is an even number.")
 else:
-    print (f"Your first choice, {num1}, is an odd number.")
+    print (f"Your first choice, {entry1}, is an odd number.")
 
-if num4 == 0:
-    print (f"Your second choice, {num2}, is an even number.")
+if rem2 == 0:
+    print (f"Your second choice, {entry2}, is an even number.")
 else:
-    print (f"Your second choice, {num2}, is an odd number.")
+    print (f"Your second choice, {entry2}, is an odd number.")

@@ -3,10 +3,10 @@
 # This program will tell the user what generation they are a part of based on
 # the value of their input 
 
-# integer variable from user input, to be run through if/else structure 
+# first (integer) variable from user input, to be run through if/else structure 
 birth_year = int( input( "Please enter your birth year as a four-digit interval:  "))
 
-# if/else structure associates ranges of years to various strings stored in the variable
+# if/else structure associates ranges of years to various strings stored in a new variable
 if birth_year < 1900:
   message = "ERROR: Your entry is too early. Please enter a valid birth year."
 elif birth_year >= 1900 and birth_year < 1922:
