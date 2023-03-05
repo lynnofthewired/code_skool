@@ -4,8 +4,6 @@
 # and displays whether the numbers are equal, or which is
 # greater, and if each number is even or odd
 
-#import math
-
 num1 = int( input( "Please enter an integer:  "))
 num2 = int( input( "Please enter a second integer:  "))
 
