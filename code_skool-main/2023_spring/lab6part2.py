@@ -2,13 +2,21 @@
 # Monkey Counter
 # This program 
 
-# the point at which the program stops printing, decrementing
+# the point at which the program stops printing and decrementing, and terminates
+# because at 0, there are no more monkeys
 NO_MONKEYS = 0
 
-monkeys = input( int( "Good day, User! \nHow many monkeys are jumping on this bed?"))
+# initialize the variable with the user input 
+monkeys = int( input( "Good day, User! \nHow many monkeys are jumping on this bed?"))
 
+if monkeys < 0:
+    print(f"There cannot be fewer than 0 monkeys. Please enter a positive ingeter.")
+
+# while loop to decrement the user's integer to zero.
 while monkeys > NO_MONKEYS:
     print(f"{monkeys} little monkeys jumping on the bed. \n1 fell off and bumped their head. \nMama called the doctor, and the doctor said, \n\"no more monkeys jumping on the bed!\"")
     monkeys -= 1
 
-print("Done!")
+# success check 
+if monkeys = 0:
+    print(f"No monkeys jumping on the bed!")
