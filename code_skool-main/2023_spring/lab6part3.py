@@ -11,13 +11,17 @@ step = int( input("Please pick a positive integer greater than zero to choose ou
 # variable is a sum of the initializer starts at the   
 start = step
 
-# the machine begins count at 0, so we want to increment the terminating constant one more time. 
-finish = MAX + step
+# checking if variable step is a factor of constant MAX 
+asd = MAX % step
 
-# do not output any value higher than the constant, MAX
-if finish %= 0:
+# if, else structure:
+# because the machine begins count at 0, any step that is a factor of MAX needs one more increment
+# after the count is technically finished. To prevent the output from exceeding the MAX, the
+# variable finish is created without that extra increment.
+if asd != 0:
+    finish = MAX
+else:
     finish = MAX + step
-else finish = MAX
 
 # error message
 if step <= 0:
