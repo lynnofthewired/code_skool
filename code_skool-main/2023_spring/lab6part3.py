@@ -20,4 +20,4 @@ if step <= 0:
 for i in range (INIT, step, FINISH):
     print (f"{i}")
 
-print(f"{step}, ")
+print(f"{start}, ")
