@@ -8,6 +8,10 @@ MAX = 100
 # gathers the user-inputted step size
 step = int( input("Please pick a positive integer greater than zero to choose our step size for our counter:  "))
 
+# error message
+if step <= 0:
+    print(f"Error: invalid step size. \nPlease choose any integer greater than zero.")
+
 # variable is a sum of the initializer starts at the   
 start = step
 
@@ -22,10 +26,6 @@ if asd != 0:
     finish = MAX
 else:
     finish = MAX + step
-
-# error message
-if step <= 0:
-    print(f"Error: invalid step size. \nPlease choose any integer greater than zero.")
 
 # for loop in three arguments, "start" is starting value, "finish" is our ending limit,
 # and "step" is the step value.
