@@ -13,13 +13,11 @@ step = int( input("Please pick a positive integer greater than zero to choose ou
 
 start = step + INIT
 
-finish = MAX
+limit = MAX
 
 # error message
 if step <= 0:
     print(f"Error: invalid step size. \nPlease choose any integer greater than zero.")
 
-for i in range (start, step, finish):
+for i in range (start, step, limit):
     print (i)
-
-print(f"{start}, ")
