@@ -7,7 +7,7 @@
 NO_MONKEYS = 0
 
 # initialize the variable with the user input 
-monkeys = int( input( "Good day, User! \nHow many monkeys are jumping on this bed?"))
+monkeys = int( input( "Good day, User! \nHow many monkeys are jumping on this bed?  "))
 
 if monkeys < 0:
     print(f"There cannot be fewer than 0 monkeys. Please enter a positive ingeter.")
