@@ -7,14 +7,14 @@
 NO_MONKEYS = 0
 
 # initialize the variable with the user input 
-monkeys = int( input( "Good day, User! \nHow many monkeys are jumping on this bed?  "))
+monkeys = int( input( "Good day, User! \nHow many monkeys are jumping on this bed?"))
 
 if monkeys < 0:
-    print(f"There cannot be fewer than 0 monkeys. Please enter a positive ingeter.")
+    print(f"\nThere cannot be fewer than 0 monkeys. Please enter a positive ingeter.")
 
 # while loop to decrement the user's integer to zero.
 while monkeys > NO_MONKEYS:
-    print(f"{monkeys} little monkeys jumping on the bed. \n1 fell off and bumped their head. \nMama called the doctor, and the doctor said, \n\"no more monkeys jumping on the bed!\"\n")
+    print(f"\n{monkeys} little monkeys jumping on the bed. \n1 fell off and bumped their head. \nMama called the doctor, and the doctor said, \n\"no more monkeys jumping on the bed!\"")
     monkeys -= 1
 
 # success check 
