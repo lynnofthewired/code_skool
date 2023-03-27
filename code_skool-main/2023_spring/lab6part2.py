@@ -14,7 +14,7 @@ if monkeys < 0:
 
 # while loop to decrement the user's integer to zero.
 while monkeys > NO_MONKEYS:
-    print(f"{monkeys} little monkeys jumping on the bed. \n1 fell off and bumped their head. \nMama called the doctor, and the doctor said, \n\"no more monkeys jumping on the bed!\"")
+    print(f"{monkeys} little monkeys jumping on the bed. \n1 fell off and bumped their head. \nMama called the doctor, and the doctor said, \n\"no more monkeys jumping on the bed!\"\n")
     monkeys -= 1
 
 # success check 
