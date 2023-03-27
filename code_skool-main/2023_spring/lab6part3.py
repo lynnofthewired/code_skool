@@ -17,7 +17,7 @@ start = step + INIT
 if step <= 0:
     print(f"Error: invalid step size. \nPlease choose any integer greater than zero.")
 
-for i in range (INIT, step, FINISH):
+for i in range (start, step, FINISH):
     print (f"{i}")
 
 print(f"{start}, ")
