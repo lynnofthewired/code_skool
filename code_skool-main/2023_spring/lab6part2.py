@@ -18,5 +18,5 @@ while monkeys > NO_MONKEYS:
     monkeys -= 1
 
 # success check 
-if monkeys = 0:
+if monkeys == 0:
     print(f"No monkeys jumping on the bed!")
