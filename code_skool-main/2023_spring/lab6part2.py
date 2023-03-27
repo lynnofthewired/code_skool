@@ -1,6 +1,8 @@
 # Lynn Makowski
 # Monkey Counter
-# This program 
+# This program fields a user for an integer, and uses that number to initialize the number
+# of monkeys that start off jumping on the bed in the well-known nursery rhyme. The
+# program then prints the whole nursery rhyme.
 
 # the constant representing the point at which the program stops printing and decrementing,
 # and terminates, because at 0, there are no monkeys
