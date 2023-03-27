@@ -6,17 +6,18 @@
 MAX = 100
 
 # gathers the user-inputted step size
-step = int( input("Please pick a positive integer greater than zero to choose our step size for our counter:  "))
+step = int( input("Please pick a positive integer greater than zero to choose our step size for our counter:\n"))
 
 # error message
 if step <= 0:
-    print(f"Error: invalid step size. \nPlease choose any integer greater than zero.")
+    print(f"\nError: invalid step size. \nPlease choose any integer greater than zero.\n")
 
 # variable is a sum of the initializer starts at the   
 start = step
 
 # checking if variable step is a factor of constant MAX 
 asd = MAX % step
+
 
 # if, else structure:
 # because the machine begins count at 0, any step that is a factor of MAX needs one more increment
