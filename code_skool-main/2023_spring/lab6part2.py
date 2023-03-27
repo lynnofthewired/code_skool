@@ -20,4 +20,4 @@ while monkeys > NO_MONKEYS:
 
 # end of program
 if monkeys == 0:
-    print(f"\No monkeys jumping on the bed.")
+    print(f"\nNo monkeys jumping on the bed.")
