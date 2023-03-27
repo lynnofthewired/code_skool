@@ -8,6 +8,6 @@ monkeys = 8
 
 while monkeys > NO_MONKEYS:
     print(f"{monkeys} little monkeys jumping on the bed, \n1 fell off and bumped his head, \nmomma called the doctor and the doctor said, \nno more monkeys jumping on the bed.")
-    count -= 1
+    monkeys -= 1
 
 print("Done!")
