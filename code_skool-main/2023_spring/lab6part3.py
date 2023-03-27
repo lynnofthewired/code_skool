@@ -16,14 +16,13 @@ if step <= 0:
 start = step
 
 # checking if variable step is a factor of constant MAX 
-asd = MAX % step
-
+mod = MAX % step
 
 # if, else structure:
 # because the machine begins count at 0, any step that is a factor of MAX needs one more increment
 # after the count is technically finished. To prevent the output from exceeding the MAX, the
 # variable finish is created without that extra increment.
-if asd != 0:
+if mod != 0:
     finish = MAX
 else:
     finish = MAX + step
