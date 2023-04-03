@@ -28,4 +28,3 @@ elif points > par:
     print(f"You scored {points} points above par.")
 else:
     print(f"Your score is on par!")
-
