@@ -1,7 +1,7 @@
 # Lynn Makowski
 # Garbage Trapper for Golf Scores
-# This program takes a golf score entries, makes sure they are within a threshold
-# throws an error message and a new prompt is it is not, and tells the user if
+# This program takes a golf score entry, makes sure it is within a threshold
+# throws an error message and a new prompt if it is not, and tells the user if
 # they are on par, or their distance from par.
 
 # All holes in one
