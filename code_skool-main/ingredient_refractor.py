@@ -15,14 +15,28 @@
 #Converts the amounts needed for each ingredient based on the number of cookies input
 #Hint: Create a variable that is a ratio of desired cookies to original cookie yield and use it as a multiplier on the original recipe ingredient values.
 
-flour = 3
-brown_sugar = 0.75
-eggs = 2
-sticks_butter = 2
-oz_chocolate_chips = 8
+# The divisor derived from the number of cookies made by the original recipe.
+OG_BATCH = 24
+batch = int( input( "Good day, baker! How many cookies would you like to bake?  "))
 
-var = flour / 24
 
-print(f"{var}")
+og_flour = 3
+og_brown_sugar = 0.75
+og_eggs = 2
+og_sticks_butter = 2
+og_oz_chocolate_chips = 8
 
+RATE_FLOUR = og_flour / OG_BATCH
+RATE_SUGAR = og_brown_sugar / OG_BATCH
+RATE_EGGS = og_eggs / OG_BATCH
+RATE_BUTTER = og_sticks_butter / OG_BATCH
+RATE_CHOCOLATE = og_oz_chocolate_chips / OG_BATCH
+
+flour = RATE_FLOUR * batch
+brown_sugar = RATE_SUGAR * batch
+eggs = RATE_EGGS * batch
+sticks_butter = RATE_BUTTER * batch
+oz_chocolate_chips = RATE_CHOCOLATE * batch
+
+print(f"{flour} cups of flower, \n{brown_sugar} cups of brown sugar, \n{eggs} eggs, \n{sticks_butter} sticks of butter, and {oz_chocolate_chips} ounces of chocolate chips.")
 
