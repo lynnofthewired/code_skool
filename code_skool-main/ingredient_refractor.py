@@ -16,6 +16,13 @@
 #Hint: Create a variable that is a ratio of desired cookies to original cookie yield and use it as a multiplier on the original recipe ingredient values.
 
 flour = 3
-brown_sugat = 0.75
+brown_sugar = 0.75
 eggs = 2
-sticks_butter
+sticks_butter = 2
+oz_chocolate_chips = 8
+
+var = flour / 24
+
+print(f"{var}")
+
+
