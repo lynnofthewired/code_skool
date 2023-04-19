@@ -16,6 +16,7 @@
 #Hint: Create a variable that is a ratio of desired cookies to original cookie yield and use it as a multiplier on the original recipe ingredient values.
 
 # The divisor derived from the number of cookies made by the original recipe.
+
 OG_BATCH = 24
 batch = int( input( "Good day, baker! How many cookies would you like to bake?  "))
 
