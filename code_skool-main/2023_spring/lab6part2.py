@@ -1,4 +1,12 @@
 # Lynn Makowski
+<<<<<<< HEAD
+#
+#
+
+number = 10
+number -= 1
+print(f"{number}")
+=======
 # Monkey Counter
 # This program fields a user for an integer, and uses that number to initialize the number
 # of monkeys that start off jumping on the bed in the well-known nursery rhyme. The
@@ -23,3 +31,4 @@ while monkeys > NO_MONKEYS:
 # end of program
 if monkeys == 0:
     print(f"\nNo monkeys jumping on the bed.")
+>>>>>>> 11f14950361875fbdc2eb42a22f55ea7dab25472
