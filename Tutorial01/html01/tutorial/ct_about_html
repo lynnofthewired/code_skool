@@ -1,0 +1,17 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Thai, restaurant, Charlotte, food" />
+    <title>About Curbside Thai</title>
+</head>
+
+<body>
+    <header>
+        <h1>Curbside Thai</h1>
+    </header>
+    <article>
+        <h2>About Us</h2>
+    </article> 
+    <footer>
+        Curbside Thai 411 Belde Drive, Charlotte NC 28201 704-555-1151
+     </footer>
+</body>
