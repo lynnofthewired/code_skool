@@ -31,12 +31,13 @@ html {
 }
 html, button, input, select, textarea {
 	font-family: serif;
-	color: #f22;
+	color: #222;
 }
 body {
 	margin: 0;
 	font-size: 1em;
 	line-height: 1.4;
+	color: #f00;
 }
 
 
