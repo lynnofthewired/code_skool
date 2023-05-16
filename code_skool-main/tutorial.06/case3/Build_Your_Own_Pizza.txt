@@ -1,0 +1,80 @@
+ 	   <legend>Build Your Pizza</legend>
+              <label class="PizzaType" >
+                 Size &nbsp 
+                  <select id="size" name="size">
+                     <option value="12">12" Regular</option>
+                     <option value="14" selected="selected">14" Large</option>
+                     <option value="16">16" Extra Large</option>
+                     <option value="20">20" Family Size</option>
+                  </select>
+                  &nbsp Crust &nbsp
+                  <select id="crust" name="crust">
+                     <option value="0">select crust</option>
+                     <option value="thin" >Thin</option>
+                     <option value="thick" selected="selected">Thick</option>
+                     <option value="hand Tossed">Hand Tossed</option>
+                     <option value="dish dish">Deep Dish</option>
+                  </select>
+                  &nbsp Quantity &nbsp
+                  <select id="qty" name="qty">
+                     <option value="0" selected="selected">0</option>
+                     <option value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                     <option value="9">9</option>
+                     <option value="10">10</option>
+                  </select>
+               </label> <br/>
+
+               <label class="PizzaType">Toppings (select all that apply) &nbsp &nbsp &nbsp
+                  <select id="toppings" name="toppings" multiple="multiple" size="5">
+                     <optgroup label="Select Toppings">                 
+                        <option>No Toppings</option> 
+                    <optgroup label="Vegetables and Fruits">
+                        <option>Diced mango</option>
+                        <option>Artichokes</option>
+                        <option>Broccoli</option>
+                        <option>Caramelized onions</option>
+                        <option>Fire roasted red peppers</option>
+                        <option>Fresh mushrooms</option>
+                        <option>Green peppers</option>
+                        <option>Green olives</option>
+                        <option>Spinach</option>
+                        <option>Grilled zucchini</option>
+                        <option>Hot banana peppers</option>
+                        <option>Jalapeno peppers</option>
+                        <option>Kalamata olives</option>
+                        <option>Pineapple</option>
+                        <option>Red onions</option>
+                        <option>Roasted garlic</option>
+                        <option>Roma tomatoes</option>
+                        <option>Sun-dried tomatoes</option>
+                     </optgroup>
+                     <optgroup label="Meats">
+                        <option>Steak Strips</option>
+                        <option>Anchovies</option>
+                        <option>Bacon Topping</option>
+                        <option>Bacon Strips</option>
+                        <option>Mesquite Chicken</option>
+                        <option>Ground Beef</option>
+                        <option>Italian Ham</option>
+                        <option>Italian Sausage</option>
+                        <option>Pepperoni</option>
+                        <option>Salami</option>
+                     </optgroup>
+                     <optgroup label="Cheeses">
+                        <option>Provolone cheese</option>
+                        <option>Extra cheese</option>
+                        <option>Feta cheese</option>
+                        <option>Four cheese blend</option>
+                        <option>Goat cheese</option>
+                        <option>Mozzarella cheese</option>
+                        <option>Parmesan cheese</option>
+                     </optgroup>
+                  </select>
+               </label>
