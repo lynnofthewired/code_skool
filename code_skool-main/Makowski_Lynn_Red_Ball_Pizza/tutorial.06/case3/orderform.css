@@ -14,7 +14,7 @@
 
 */
 
-/*
+
 form              {margin: 0px; padding: 5px}
 
 fieldset          {border: 5px inset rgb(255, 192, 192); background-color: ivory; margin: 0px 0px 10px; padding: 10px}
@@ -23,13 +23,13 @@ fieldset          {border: 5px inset rgb(255, 192, 192); background-color: ivory
 fieldset legend   {color: red; letter-spacing: 3px} 
 
 
-label.Contact     {display: block; margin: 10px 0px 5px 5px} /*top, right, bottom, left*/
+label.Contact     {display: block; margin: 10px 0px 5px 5px}
 
 label.Extras      {display: block;  margin: 10px 0px 10px 20px} 
 
 label.PizzaType   {display: block;  margin: 10px 0px 10px 20px} 
 
-*/
+
 
 
 
