@@ -1,0 +1,13 @@
+03/11/2024
+
+we're gonna use a command line tool called "Create React App", it generates a starter React project, comes fully baked with all the setup and config that we need like Babble and Webpack which we'll need to compile everything later into production-ready Javascript, instead of having to configure all of that ourselves.
+
+type this in the terminal: "npx create-react-app lynn-blog", where "lynn-blog" is the name of the project.
+
+That is going to make a new directory called "lynn-blog" with a bunch of shit inside. Here's what's inside:
+
+node-modules - this is where the dependencies live, including the REact library, and other libraries. We'll never go in there, it just does its thing.
+
+public - this is where everything goes that's public to the browser, like index.html, which, at least in this case, is where all of our REACT code is going to go, that is, inside of <div id="root"></div>
+
+src - For this tutorial we're deleting the file "App.test.js". The file "index.js" kickstarts the application. Responsible for taking the REACT componenets and mounting them to the DOM. See the function on line 7, where it takes the "<App />" and "renders" it in "ReactDOM", putting it inside "document.getElementById('root')", which is our "root" div from "index.html".
