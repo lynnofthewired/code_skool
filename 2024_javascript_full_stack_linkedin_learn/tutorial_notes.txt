@@ -1,5 +1,5 @@
 03/11/2024
-
+PART TWO:
 we're gonna use a command line tool called "Create React App", it generates a starter React project, comes fully baked with all the setup and config that we need like Babble and Webpack which we'll need to compile everything later into production-ready Javascript, instead of having to configure all of that ourselves.
 
 type this in the terminal: "npx create-react-app lynn-blog", where "lynn-blog" is the name of the project.
@@ -10,4 +10,15 @@ node-modules - this is where the dependencies live, including the REact library,
 
 public - this is where everything goes that's public to the browser, like index.html, which, at least in this case, is where all of our REACT code is going to go, that is, inside of <div id="root"></div>
 
-src - For this tutorial we're deleting the file "App.test.js". The file "index.js" kickstarts the application. Responsible for taking the REACT componenets and mounting them to the DOM. See the function on line 7, where it takes the "<App />" and "renders" it in "ReactDOM", putting it inside "document.getElementById('root')", which is our "root" div from "index.html".
+src - For this tutorial we're deleting the file "App.test.js".
+The file "index.js" kickstarts the application. Responsible for taking the REACT componenets and mounting them to the DOM. See the function on line 7, where it takes the "<App />" and "renders" it in "ReactDOM", putting it inside "document.getElementById('root')", which is our "root" div from "index.html".
+We're going to delete the file "reportWebVitals" as well, which means we're deleting its corresponding "import" in "index.js", and the function at the bottom of "index.js".
+Finally, we're deleting "setupTests.js"
+
+On line 8 in "index.js", you have <React.StrictMode>
+
+In the top level of the project folder, you have "package.json". 
+    Go into this and run one of the "scripts", "react-scripts start" in the terminal. which will look like "npm run start", but make sure you're in the "lynn-blog" directory.
+    It will spin up the application on localhost:3000
+
+Without the node_modules folder, the application will not run. If you ever download a REACT project from like, GitHub, it might not have the modules with it, since this folder contains the entire REACT library and is huge. You'll need to install it yourself using "npm install" in the terminal, and then "npm run start" will do its thing.
