@@ -54,4 +54,25 @@ This exports the function called "App", which enables it to be imported into oth
 
 **PART 4**
 
-shoob
+Right now we have the title of our blog hard coded in H1 tags. A different way to do this is to store the title of the site in  a variable or constant, like so:
+
+    const title = "Lynn's Blog";
+
+This is going to go right inside of our function called "App". After that we will call the variable in the H1 tags by putting it inside of curly braces, like:
+
+    <h1>{ title }</h1>
+
+When we use curly braces like that, React knows we're trying to output dynamic data like a variable, and it will look for that data.
+
+We can do this as many times as we want. If we want to use integers instead of strings to say, count how many likes something has, we'll do:
+
+    const likes = 50;
+
+and if we do that it will output as a string. Straightforward so far. But what we cannot do is objects. If you try something like:
+
+    const person = {name: yoshi, age: 30}
+
+that will break the system. But you can do arrays which will output as a string. You can do math that it will have to evaluate before outputting as a string, like:
+
+    <p>{ Math.random() * 10 }</p>
+
