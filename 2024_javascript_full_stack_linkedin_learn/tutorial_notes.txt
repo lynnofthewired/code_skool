@@ -50,3 +50,7 @@ One more thing: at the end of "App.js" you're always going to want to have this 
     export default App;
 
 This exports the function called "App", which enables it to be imported into other files.
+
+
+**PART 4**
+
