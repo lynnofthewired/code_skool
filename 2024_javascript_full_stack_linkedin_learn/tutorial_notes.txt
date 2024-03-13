@@ -1,5 +1,8 @@
 03/11/2024
-PART TWO:
+
+
+**PART TWO**
+
 we're gonna use a command line tool called "Create React App", it generates a starter React project, comes fully baked with all the setup and config that we need like Babble and Webpack which we'll need to compile everything later into production-ready Javascript, instead of having to configure all of that ourselves.
 
 type this in the terminal: "npx create-react-app lynn-blog", where "lynn-blog" is the name of the project.
@@ -22,3 +25,28 @@ In the top level of the project folder, you have "package.json".
     It will spin up the application on localhost:3000
 
 Without the node_modules folder, the application will not run. If you ever download a REACT project from like, GitHub, it might not have the modules with it, since this folder contains the entire REACT library and is huge. You'll need to install it yourself using "npm install" in the terminal, and then "npm run start" will do its thing.
+
+
+**PART 3**
+
+React has componenets. A nav bar might be a component, an article might be a component., a sidebar, etc. Our job with React is to create these components. Each one will have their own templates, and also Javascript logic, like a "Logout" button would have. Which is great.
+
+In our shit, we only have one component, and it can be seen in the "index.js" file, it's called "App". It kickstarts the application, as we know. All of the content we see on the default React page with that spinning Bohr model is called the Root component, and it is basically everything inside of that function called App. That function returns what looks like HTML code.
+
+This function could be an arrow function...I guess?...but it must begin with a capital letter, which is weird, i.e., not JavaScript conventions. It is however, not HTML, it is actually JSX. Syntax is almost identical to HTML, but it is slightly different. We might end up thinking about this the same way we approach Wordpress PHP, although of course it would be doing completely different things in the DOm tree. 
+
+One big differnce between JSX and HTML is the way you add class names, in JSX we're gonna be using camel case, and instead of having something like '<div class="">', you're gonna have '<div className="">'. this is because "class" is a reserved keyword in Javascript. This gets changed to "class" behind the curtain. 
+
+We're gonna be going into App.js, go into the function called "App" and delete everything inside the '<div className="App">' container, and restart our template. Replace it with:
+
+    <div className="content">
+        <h1>Lynn's Blog</h1>
+    </div>
+
+I've also just gone ahead and styled  the CSS a little bit so that it's white text on black, and a monospace font. It's looking good.
+
+One more thing: at the end of "App.js" you're always going to want to have this export line:
+
+    export default App;
+
+This exports the function called "App", which enables it to be imported into other files.
