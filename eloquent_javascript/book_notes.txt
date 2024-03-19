@@ -1,0 +1,134 @@
+**Chapter 1: Values, Types, Operators**
+
+This is mostly review, gonna add things I didn't know
+
+- Special numbers:
+
+There are three special values in JavaScript that *are* numbers but do not behave the same as the rest of the numbers. The first two are 'Infinity' and '-Infinity'. These are different because 'Infinity - 1' is still 'Infinity'.
+Not surprisingly, infinity-based operations are not considered mathematically sound, and will lead to the next special number: NaN, which stands for 'not a number. NaN's value does have number for its type, but you'll get that result when the answer isn't meaningful, like by dividing 0 by 0, or adding 'Infinity' to '-Infinity'. 
+
+- Strings:
+
+Strings are modeled as series of bits just like numbers. they cannot be multiplied or divided, but you can use "+", wherein instead of adding it will concatenate, like so:
+
+    "con" + "cat" + "en" + "ate"
+
+will print "concatenate".
+There are also associated functions that can be used to perform other operations on them, but the book will get into that later.
+In JS, strings written with single or double quotes behave mostly the same. Backtick-quoted strings are called *template literals*, and those can do a few more tricks. They are able to span lines, and can also add other values. Watch:
+
+    `half of 100 is ${100 / 2}`
+
+When you write something inside of ${} in a template literal, its result will be computed, *converted to a string*, and then included at that position. Therefore, this will produce the string:
+
+    half of 100 is 50
+
+- Unary operators:
+
+Not all operators are symbols, some are written as words. One such operator is 'typeof', which produces a string value naming the type of value you give it:
+
+    console.log(typeof 4.5)
+    // -> number
+    console.log(typeof "x")
+    // -> string
+
+This is a *unary operator*, because it operates on one value, whereas most other operators are *binary operators*. The minus operator can be used as a binary or unary operator:
+
+    console.log(-(10-2))
+    // -> -8
+
+Makes sense.
+
+- Boolean values:
+
+Booleans are also written as words, like:
+
+    console.log(3 < 2)
+    // -> false
+    consolge.log(3 > 2)
+    // -> true
+
+which works with strings too:
+
+    console.log("Aardvark" < "Zoroaster")
+    // -> true
+
+The way strings are ordered is only roughly alphabetical: uppercase letters are always "less" than lowercase, therefore 'Z < a', which kinda sucks. Nonalphabetic characters like '!' or '-' are also in the ordering. So what Javascript is doing is going over Unicode characters from left to right, comparing them one by one. 
+
+There is only one value in Javascript that is not equal to itself, and that is NaN:
+
+    console.log(NaN == NaN)
+    // -> false
+
+This is because NaN is nonsensical, so you wouldn't want it to be computed as equal to some other nonsensical number.
+
+- Logical operators:
+
+JS supports three of these: *and*, *or*, and *not*, and they are used to "reason" about Booleans.
+
+&& = and
+|| = or
+! = not
+
+But that's review.
+'!' is a unary operator that flips the value given to it, so !true produces false, !false produces true.
+When mixing different types of operators it is not always going to be obvious when parentheses are needed. Supposedly you can usually get by with knowing that of all the operators we've seen so far, '||' has the lowest precedence, then comes '&&', and then the comparison operators like '<', "==", and then all the rest. This order has been carefully chosen so that as few parentheses as possible are needed in very typical expressions such as:
+
+    1 + 1 == 2 && 10 * 10 > 50
+
+- Conditional operator; or, Ternary operator:
+
+This operator is written with a '?' and a ':' like so:
+
+    console.log(true ? 1 : 2);
+    // -> 1
+    console.log(false ? 1 : 2);
+    // -> 2
+
+The value on the left of the question mark "picks" which of the other two values will come out. When it is true, it chooses the middle value, and when it is false, it chooses the value on the right. 
+
+- Empty values:
+
+2 of them; 'null', and 'undefined', used to denote the absence of a meaningful value. They are values, but carry no information. The fact that they both exist is practically an accident of Javascript's design, and it is generally not important to distinguish them from one another.
+
+- Automatic type conversion:
+
+Javascript is made to accept most any program, even if it does bizarre things, like multiplying '8' by 'null', which produces '0'. It uses something called *type coercion* to quietly convert "wrong" types of value to the types that it needs to produce something, so 'null' becomes '0'. It does this with a set of rules that often aren't quite what you'd want or expect, like:
+
+    console.log("5" -1);
+    // -> 4
+    console.log("5" +1);
+    // -> 51
+
+When you subtract '1' from "5" the string, it coerces "5" into 5, but when you add the string to 1 it concatenates, indicating that it has coerced '1' to a string to produce a string.
+One of the obscure rules that can be useful is that when using comparison operators if you have 'null' or 'undefined' on either side, the code will only produce 'true' if both sides are 'null' or 'undefined'. therefore you can test whether a value has a real value instead of 'null' or 'undefined' by comparing it like:
+
+    console.log(null == undefined);
+    // -> true
+    console.log(null == 0);
+    // -> false
+
+- Short-Circuiting of Logical Operators:
+
+The operators && and || handle values of a different type in their own way, by converting the value on the left side to the Boolean type in order to decide what to do, but depending on the operator and the result of that conversion, they will return either the original lefthand value, or the right hand value. '||' for example will return the value to its left *when the can be converted to true*, and when it can't it will return the value on the right. See:
+
+    console.log(null || "user")
+    // -> user
+    console.log("Agnes" || "user")
+    // -> Agnes
+
+THis is useful for falling back on a default value. If yo have a value that might be empty, you can put || after it with a replacement value. If the initial value can be converted to false, you'll get the replacement instead. The rules for converting strings and numbers to Boolean values state that 0, NaN, and the empty string ("") count as false, while all the other values count as true. So '0 || -1' produces '-1', and '"" || "!?" produces "!?".
+
+&& works the other way around. When the value to the left converts to false, it produces that value, otherwise it produces the right value.
+
+In either operator, the value on the right is evaluated only when necessary. In the case of 'true || x' 
+
+
+**Chapter 2: Program Structure**
+
+- Expressions and Statements:
+
+An *expression* is any fragment of code tht produces a vlue. Every value written literally (a number like '22' or a string like ' "psychoanalysis" ') is an expression. Any value in parentheses is an expression and so is a binary operator applied to two expressions or a unary operator applied to one.
+Expressions can contain other expressions, like subsentences in verbal language. If expressions are like sentence fragments, a JavaScript staatement is a full sentence. This allows us to build expressions that describe arbitrarily complex computations.
+
+THe simplest kind of statement you can have is an expression with a semicolon after it.
